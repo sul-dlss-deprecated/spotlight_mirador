@@ -12,7 +12,22 @@ module SpotlightMirador
           },
           showAddFromURLBox: false,
           windowObjects: [
-            { loadedManifest: manifest }
+            {
+              viewType: 'ImageView',
+              displayLayout: false,
+              bottomPanelVisible: false,
+              sidePanel: false,
+              loadedManifest: manifest,
+              canvasControls: {
+                annotations: {
+                  annotationLayer: false,
+                  annotationCreation: false
+                },
+                imageManipulation: {
+                  manipulationLayer: false
+                }
+              }
+            }
           ],
           data: [
             { manifestUri: manifest }
